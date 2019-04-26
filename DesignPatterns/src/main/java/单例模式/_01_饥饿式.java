@@ -12,7 +12,7 @@ import lombok.Data;
  * 缺点: 由于是类加载时就初始化了一个实例,如果一直没有使用该实例,会造成内存浪费,而且没能起到懒加载效果
  */
 @Data
-public class _01_饥饿模式 {
+public class _01_饥饿式 {
 
     private Integer id;
 
@@ -21,13 +21,13 @@ public class _01_饥饿模式 {
     private Integer age;
 
     // 私有化构造器
-    private _01_饥饿模式(){}
+    private _01_饥饿式(){}
 
     // 初始化一个实例
-    private static final _01_饥饿模式 INSTANCE = new _01_饥饿模式();
+    private static final _01_饥饿式 INSTANCE = new _01_饥饿式();
 
     // 提供公共静态方法获取实例
-    public static _01_饥饿模式 getInstance(){
+    public static _01_饥饿式 getInstance(){
         return INSTANCE;
     }
 }
