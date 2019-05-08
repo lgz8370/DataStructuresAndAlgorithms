@@ -38,7 +38,15 @@ public class Strategy {
                 return num % 2 == 0;
             }
         });
-        System.out.println(list);
+        System.out.println(list); // [2, 4, 6]
+
+        list = filteNum(list, new Condition() {
+            @Override
+            public boolean check(int num) {
+                return num < 5;
+            }
+        });
+        System.out.println(list); // [2, 4]
     }
 
 }
